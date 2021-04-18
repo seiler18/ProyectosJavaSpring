@@ -1,0 +1,1 @@
+body{color: black;font-weight: bolder;font-family: sans-serif; background-image: url(/img/perros.jpg);background-size: cover; box-sizing: border-box;}

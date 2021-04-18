@@ -1,0 +1,10 @@
+	public String listarRegistros(ModelMap mapa) {
+		
+		// Esto lo usare para cuando quiera mostrar los registros que existen de
+		// mascota, dueños
+		// en una tabla
+		mapa.put("dueno", duenoService.getAllDuenos());
+		mapa.put("mascota", mascotaService.getAllMascotas());
+		mapa.put("registros", registroMascotaDuenoService.getAllRegistros());
+		return "listado";
+	}

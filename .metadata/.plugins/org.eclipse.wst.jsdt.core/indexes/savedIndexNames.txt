@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\IchBi\OneDrive\Escritorio\Proyectos Java Spring\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2185558917.index
+99983694.index
+1742622016.index
+4020906130.index
+996161032.index
+832572800.index

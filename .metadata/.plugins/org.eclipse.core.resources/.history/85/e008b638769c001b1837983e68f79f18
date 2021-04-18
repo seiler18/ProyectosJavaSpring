@@ -1,0 +1,227 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@page import="cl.jesus.model.entity.RegistroMascotaDueno"%>
+<%@page import="cl.jesus.model.entity.Dueno"%>
+<%@page import="cl.jesus.model.entity.Mascota"%>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+	 <!--mi CSS-->
+ <link rel="stylesheet" type=text/css href="/css/style.css">
+   <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<title>Registro de mascotas 2021</title>
+</head>
+<body onload="getInformacion()">
+
+	<div class="container justify-content-center">
+		
+			<div class="col-sm">
+
+				<div id="titulo" class="my-2 text-center">
+					<h3>Tabla de Registros</h3>
+					<br/>
+				</div>
+
+
+			</div>
+			<br/>
+			
+			<div class="form-row">
+			<div id="titulo" class="my-2 text-center">
+					<h3>Mascotas</h3>
+					<br/>
+				</div>
+			<table class="table">
+							<thead class="thead-dark">
+								<tr class="text-center">
+								<th scope="col">ID Mascota</th>
+									<th scope="col">Nombre Mascota</th>
+									<th scope="col">Tipo</th>
+									<th scope="col">Raza</th>
+									<th scope="col">Sexo</th>
+									<th scope="col">Edad</th>
+									<th scope="col">Descripción</th>
+									<th scope="col">Región</th>
+									<th scope="col">Comuna</th>
+									<th scope="col">Dirección</th>
+									<th scope="col">Acciones</th>
+								</tr>
+							</thead>
+
+
+							<tbody class="table table-striped">
+
+
+								<c:forEach var="mascota" items="${mascotas}">
+									<tr class="text-center">
+										<th scope="row">${mascota.id}</th>
+										<th>${mascota.nombreMascota}</th>
+										<th>${mascota.tipo}</th>
+										<th>${mascota.raza}</th>
+										<th>${mascota.sexo}</th>
+										<th>${mascota.edadMascota}</th>
+										<th>${mascota.descripcion}</th>
+										<th>${mascota.region}</th>
+										<th>${mascota.comuna}</th>
+										<th>${mascota.direccion}</th>
+										<th><button class="btn btn-primary">Editar</button>&nbsp;<button class="btn btn-primary">Eliminar</button></th>
+									</tr>
+								</c:forEach>
+
+
+
+
+
+								<!-- 							FALTA HACER EL FORM > POST PARA DESPUES DE UNA PETICION PODER FILTRAR LOS DATOS EN LA TABLA	 -->
+
+
+
+
+
+
+
+							</tbody>
+						</table>
+			</div>
+			<br/>
+			<div class="form-row">
+			<h3>Dueños</h3>
+			<table class="table">
+							<thead class="thead-dark">
+								<tr class="text-center">
+								<th scope="col">ID Dueño</th>
+									<th scope="col">RUT</th>
+									<th scope="col">Nombre</th>
+									<th scope="col">Edad</th>
+									<th scope="col">Acciones</th>
+
+								</tr>
+							</thead>
+
+
+							<tbody class="table table-striped">
+
+
+								<c:forEach var="dueno" items="${duenos}">
+									<tr class="text-center">
+										<th scope="row">${dueno.id}</th>
+										<th>${dueno.rut}</th>
+										<th>${dueno.nombreDueno}</th>
+										<th>${dueno.edadDueno}</th>
+
+										<th><button class="btn btn-primary">Editar</button>&nbsp;<button class="btn btn-primary">Eliminar</button></th>
+									</tr>
+								</c:forEach>
+
+
+
+
+
+								<!-- 							FALTA HACER EL FORM > POST PARA DESPUES DE UNA PETICION PODER FILTRAR LOS DATOS EN LA TABLA	 -->
+
+
+
+
+
+
+
+							</tbody>
+						</table>			
+			</div>
+			
+			<div class="container row justify-content-center">
+				<button type ="submit" onclick="funcionNoDesarrollada()"class="btn btn-dark">Buscar</button>
+				<button type ="submit" onclick="window.location.href='https://jesusseiler.site/'" class="btn btn-dark">Volver al inicio</button>
+				
+			</div>
+
+
+
+			<script type="text/javascript">
+			
+			var funcionNoDesarrollada = function(){
+				alert('Esta función aun no esta implementada');
+			}
+			
+			var getInformacion = function(){
+				alert('Esta pagina es de prueba, aun le faltan muchas funciones. Gracias por visitarla.');
+			}
+
+			</script>
+
+		</div>
+
+	
+	<div class="p-4 row justify-content-center align-items-center">
+<div class="col-sm-4 text-center">
+<b>Certificado de experiencia :</b> <br>
+<br>
+<div class="p-4 row justify-content-center align-items-center" data-iframe-width="150" data-iframe-height="270" data-share-badge-id="5c3ed424-4321-4dfa-b1c5-ec322c126595" data-share-badge-host="https://www.youracclaim.com"></div><script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
+
+</div>
+</div>
+
+
+  <section id="contact">
+    <footer class="hero-section bg-dark text-center text-light p-5 " id="footer">
+      <div class="container text-center hero-section text-light ">
+
+        <div class="p-4 text-center">
+          <h1 class="font-weight-bold text-center">Mis redes sociales </h1>
+        </div>
+
+        <p><a href="https://www.facebook.com/IchBinSeiler" target="_blank"><i class="fab fa-facebook fa-"></i>
+            <span>Facebook&nbsp;</span></a>
+          <a href="https://www.twitte.com/Ich_BinSeiler" target="_blank"><i class="fab fa-twitter fa-"></i>
+            <span>Twitter&nbsp;</span></a></p>
+
+        <p><a href="https://www.instagram.com/ichbinseiler" target="_blank"><i class="fab fa-instagram fa-"></i>
+            <span>Instagram&nbsp;</span></a>
+          <a href="https://gitlab.com/seiler18" target="_blank"><i class="fab fa-gitlab fa-"></i>
+            <span>Gitlab&nbsp;</span></a></p>
+
+        <a href="https://github.com/seiler18" target="_blank"><i class="fab fa-github fa-"></i>
+          <span>Github&nbsp;</span></a>
+        <a href="https://www.linkedin.com/in/ichbinseiler/" target="_blank"><i class="fab fa-linkedin fa-"></i>
+          <span>LinkedIn&nbsp;</span></a>
+
+      </div>
+      <br />
+      <a href="https://api.whatsapp.com/send?phone=+56953292612" target="_blank"> <span>Contactar via WhatsApp
+          &nbsp;</span><i class="fab fa-whatsapp fa-2x" data-content="WS Jesus Seiler"></i></a>
+      <p><a href="mailto:ichbinseiler@gmail.com" target="_blank"> <span>Contactar por Gmail&nbsp;</span><i
+            class="fab fa-google fa-2x"></i> </a></p>
+
+
+      <div>
+        <p>©Jesús Seiler 2021. Todos los derechos reservados. </p>
+      </div>
+
+      <br />
+
+
+    </footer>
+  </section>
+  <!--SECCION 7 footer -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+</body>
+</html>

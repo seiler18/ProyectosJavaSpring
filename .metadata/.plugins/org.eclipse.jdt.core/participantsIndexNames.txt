@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\Users\IchBi\OneDrive\Escritorio\Proyectos\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\303048051.index
+\RegistroMascota\src\main\java
+C:\Users\IchBi\OneDrive\Escritorio\Proyectos Java Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\303048051.index
+\RegistroMascota\src\main\java
